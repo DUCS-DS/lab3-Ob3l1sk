@@ -1,6 +1,5 @@
 from llist import LList, Node, append
 
-
 def length(lst):
     """return the length of a finite linked list"""
     count = 0
@@ -8,19 +7,16 @@ def length(lst):
     while node is not None:
         count = count + 1
         node = node.next  
-    return(count)    
-
-
+    return(count)
+    
 def llprint(lst):
     """print a finite linked list"""
     node = lst.head
     while node is not None:
-        print(node.val)
+        print("The Current Node is :", str(node.val))
         node = node.next
         
-
 if __name__ == "__main__":
-
     llist = LList()
     append(llist, Node(1))
     append(llist, Node(2))
@@ -32,9 +28,9 @@ if __name__ == "__main__":
     append(llist, Node(128))
     append(llist, Node(256))
     append(llist, Node(512))
-    
     length(llist)
-    print("The Length of the llist is:" ,length(llist))
+    print("The Length of the llist is:",length(llist))
     llprint(llist)
+     
     from genfinite import lst
     print("The Length of lst is: ",length(lst))
